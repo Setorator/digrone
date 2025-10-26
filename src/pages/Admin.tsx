@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useState, useEffect } from 'react';
-import { getPlayers, getMatches, getGoals, savePlayers, saveMatches, saveGoals } from '@/lib/storage';
+import { fetchPlayers, fetchMatches, fetchGoals, savePlayers, saveMatches, saveGoals } from '@/lib/github-storage';
 import type { Player, Match, Goal } from '@/lib/storage';
 import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -17,11 +17,16 @@ const Admin = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    setPlayers(getPlayers());
-    setMatches(getMatches());
+    const loadData = async () => {
+      const players = await fetchPlayers();
+      const matches = await fetchMatches();
+      setPlayers(players);
+      setMatches(matches);
+    };
+    loadData();
   }, []);
 
-  const addPlayer = (e: React.FormEvent<HTMLFormElement>) => {
+  const addPlayer = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const newPlayer: Player = {
@@ -34,12 +39,12 @@ const Admin = () => {
     };
     const updatedPlayers = [...players, newPlayer];
     setPlayers(updatedPlayers);
-    savePlayers(updatedPlayers);
+    await savePlayers(updatedPlayers);
     e.currentTarget.reset();
     toast({ title: 'Spelare tillagd', description: `${newPlayer.name} har lagts till i laget.` });
   };
 
-  const addMatch = (e: React.FormEvent<HTMLFormElement>) => {
+  const addMatch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const lineup = formData.getAll('lineup') as string[];
@@ -56,7 +61,7 @@ const Admin = () => {
 
     const updatedMatches = [...matches, newMatch];
     setMatches(updatedMatches);
-    saveMatches(updatedMatches);
+    await saveMatches(updatedMatches);
 
     // Update player match count
     const updatedPlayers = players.map(player => {
@@ -66,13 +71,13 @@ const Admin = () => {
       return player;
     });
     setPlayers(updatedPlayers);
-    savePlayers(updatedPlayers);
+    await savePlayers(updatedPlayers);
 
     e.currentTarget.reset();
     toast({ title: 'Match registrerad', description: `Match mot ${newMatch.opponent} har lagts till.` });
   };
 
-  const addGoal = (e: React.FormEvent<HTMLFormElement>) => {
+  const addGoal = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const playerId = formData.get('goalScorer') as string;
@@ -88,8 +93,8 @@ const Admin = () => {
       time: formData.get('time') as string,
     };
 
-    const goals = getGoals();
-    saveGoals([...goals, newGoal]);
+    const goals = await fetchGoals();
+    await saveGoals([...goals, newGoal]);
 
     // Update player stats
     const updatedPlayers = players.map(player => {
@@ -102,7 +107,7 @@ const Admin = () => {
       return player;
     });
     setPlayers(updatedPlayers);
-    savePlayers(updatedPlayers);
+    await savePlayers(updatedPlayers);
 
     e.currentTarget.reset();
     toast({ title: 'Mål registrerat', description: 'Målet har lagts till i statistiken.' });

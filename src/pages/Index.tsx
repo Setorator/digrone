@@ -1,18 +1,21 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trophy, Users, Target } from 'lucide-react';
-import { getMatches, getPlayers } from '@/lib/storage';
+import { fetchMatches, fetchPlayers } from '@/lib/github-storage';
 import { useEffect, useState } from 'react';
 
 const Index = () => {
   const [stats, setStats] = useState({ matches: 0, players: 0, totalGoals: 0, wins: 0 });
 
   useEffect(() => {
-    const matches = getMatches();
-    const players = getPlayers();
-    const totalGoals = players.reduce((sum, p) => sum + p.goals, 0);
-    const wins = matches.filter(m => m.goalsFor > m.goalsAgainst).length;
-    setStats({ matches: matches.length, players: players.length, totalGoals, wins });
+    const loadData = async () => {
+      const matches = await fetchMatches();
+      const players = await fetchPlayers();
+      const totalGoals = players.reduce((sum, p) => sum + p.goals, 0);
+      const wins = matches.filter(m => m.goalsFor > m.goalsAgainst).length;
+      setStats({ matches: matches.length, players: players.length, totalGoals, wins });
+    };
+    loadData();
   }, []);
 
   return (

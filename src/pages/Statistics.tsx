@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { getMatches, getPlayers } from '@/lib/storage';
+import { fetchMatches, fetchPlayers } from '@/lib/github-storage';
 import { useEffect, useState } from 'react';
 import type { Match, Player } from '@/lib/storage';
 
@@ -10,8 +10,13 @@ const Statistics = () => {
   const [matches, setMatches] = useState<Match[]>([]);
 
   useEffect(() => {
-    setPlayers(getPlayers().sort((a, b) => b.goals - a.goals));
-    setMatches(getMatches().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+    const loadData = async () => {
+      const players = await fetchPlayers();
+      const matches = await fetchMatches();
+      setPlayers(players.sort((a, b) => b.goals - a.goals));
+      setMatches(matches.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+    };
+    loadData();
   }, []);
 
   return (
