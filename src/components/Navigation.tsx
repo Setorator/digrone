@@ -24,11 +24,6 @@ const Navigation = () => {
                 Statistik
               </Button>
             </Link>
-            <Link to="/admin">
-              <Button variant={isActive('/admin') ? 'default' : 'ghost'}>
-                Admin
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
