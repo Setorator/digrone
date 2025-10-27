@@ -31,6 +31,7 @@ const Index = () => {
       const lastFive = matchesPlayed
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
         .slice(0, 5)
+        .reverse()
         .map(m => {
           if (m.goalsFor > m.goalsAgainst) return 'win';
           if (m.goalsFor < m.goalsAgainst) return 'loss';
@@ -51,7 +52,7 @@ const Index = () => {
         .sort( (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime() )[0];
       const prevMatch = matches
         .filter( m => new Date(m.date) < now )
-        .sort( (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime() )[0];
+        .sort( (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime() )[0];
       setNextMatch(nextMatch);
       setPrevMatch(prevMatch);
 
