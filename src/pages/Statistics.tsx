@@ -12,9 +12,9 @@ const Statistics = () => {
   useEffect(() => {
     const loadData = async () => {
       const players = await fetchPlayers();
-      const matches = await fetchMatches();
+      const matches = await fetchMatches()
       setPlayers(players.sort((a, b) => b.goals - a.goals));
-      setMatches(matches.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+      setMatches(matches.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
     };
     loadData();
   }, []);

@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Trophy, Users, Target } from 'lucide-react';
+import { Trophy, Award, Target } from 'lucide-react';
 import { fetchMatches, fetchPlayers } from '@/lib/github-storage';
 import { useEffect, useState } from 'react';
 import { Match } from '@/lib/storage';
@@ -9,11 +9,12 @@ const Index = () => {
   const [stats, setStats] = useState(
     { 
       matches: 0, 
-      players: 0, 
-      goalRatio: 0.0, 
-      wins: 0 
+      totGoalsFor: 0,
+      totGoalsAgainst: 0,
+      wins: 0
     }
   );
+  const [lastFiveResults, setLastFiveResults] = useState<string[]>([]);
   const [nextMatch, setNextMatch] = useState<Match | null>(null)
   const [prevMatch, setPrevMatch] = useState<Match | null>(null)
 
@@ -21,18 +22,28 @@ const Index = () => {
     const loadData = async () => {
       const now = new Date();
       const matches = await fetchMatches();
-      const players = await fetchPlayers();
       const matchesPlayed = matches.filter( m => new Date(m.date) < now );
       const totGoalsFor = matches.reduce((sum, m) => sum + m.goalsFor, 0);
       const totGoalsAgainst = matches.reduce((sum, m) => sum + m.goalsAgainst, 0);
-      const goalRatio =  totGoalsFor/ totGoalsAgainst;
-      const wins = matches.filter(m => m.goalsFor > m.goalsAgainst).length;
+      const wins = matchesPlayed.filter(m => m.goalsFor > m.goalsAgainst).length;
+      
+      // Get last 5 matches results
+      const lastFive = matchesPlayed
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+        .slice(0, 5)
+        .map(m => {
+          if (m.goalsFor > m.goalsAgainst) return 'win';
+          if (m.goalsFor < m.goalsAgainst) return 'loss';
+          return 'draw';
+        });
+      setLastFiveResults(lastFive);
+      
       setStats(
         { 
-          matches: matchesPlayed.length, 
-          players: players.length, 
-          goalRatio, 
-          wins 
+          matches: matchesPlayed.length,
+          totGoalsFor,
+          totGoalsAgainst, 
+          wins
         });
 
       const nextMatch = matches
@@ -69,12 +80,27 @@ const Index = () => {
           
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Spelare</CardTitle>
-              <Users className="h-4 w-4 text-muted-foreground" />
+              <CardTitle className="text-sm font-medium">Senaste 5 matcherna</CardTitle>
+              <Award className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stats.players}</div>
-              <p className="text-xs text-muted-foreground">Aktiva spelare</p>
+              <div className="flex gap-2 justify-center items-center h-12">
+                {lastFiveResults.length > 0 ? (
+                  lastFiveResults.map((result, idx) => (
+                    <div
+                      key={idx}
+                      className={`w-8 h-8 rounded-full ${
+                        result === 'win' ? 'bg-green-500' :
+                        result === 'loss' ? 'bg-red-500' :
+                        'bg-gray-400'
+                      }`}
+                      title={result === 'win' ? 'Vinst' : result === 'loss' ? 'Förlust' : 'Oavgjort'}
+                    />
+                  ))
+                ) : (
+                  <p className="text-xs text-muted-foreground">Inga matcher än</p>
+                )}
+              </div>
             </CardContent>
           </Card>
           
@@ -84,8 +110,8 @@ const Index = () => {
               <Target className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stats.goalRatio.toFixed(1)}</div>
-              <p className="text-xs text-muted-foreground">Gjorda mål / Insläppta mål</p>
+              <div className="text-2xl font-bold">{stats.totGoalsFor} - {stats.totGoalsAgainst}</div>
+              <p className="text-xs text-muted-foreground">Gjorda mål - Insläppta mål</p>
             </CardContent>
           </Card>
         </div>
@@ -146,6 +172,12 @@ const Index = () => {
           </Card>
         </div>
       </main>
+      <footer className="mt-16 py-6 border-t border-border/40">
+        <div className="container mx-auto px-4 flex flex-col items-center justify-center">
+          <p className="text-xs text-muted-foreground/60 mb-2">Framtagen och drivs av:</p>
+          <img src="asklingforit.logo.svg" alt="Askling for IT" className="h-16" />
+        </div>
+      </footer>
     </div>
   );
 };
