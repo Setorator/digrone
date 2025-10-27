@@ -19,21 +19,22 @@ const Index = () => {
 
   useEffect(() => {
     const loadData = async () => {
+      const now = new Date();
       const matches = await fetchMatches();
       const players = await fetchPlayers();
+      const matchesPlayed = matches.filter( m => new Date(m.date) < now );
       const totGoalsFor = matches.reduce((sum, m) => sum + m.goalsFor, 0);
       const totGoalsAgainst = matches.reduce((sum, m) => sum + m.goalsAgainst, 0);
       const goalRatio =  totGoalsFor/ totGoalsAgainst;
       const wins = matches.filter(m => m.goalsFor > m.goalsAgainst).length;
       setStats(
         { 
-          matches: matches.length, 
+          matches: matchesPlayed.length, 
           players: players.length, 
           goalRatio, 
           wins 
         });
 
-      const now = new Date();
       const nextMatch = matches
         .filter( m => new Date(m.date) > now )
         .sort( (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime() )[0];
