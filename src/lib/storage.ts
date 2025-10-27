@@ -38,9 +38,9 @@ const STORAGE_KEYS = {
 const initializeData = () => {
   if (!localStorage.getItem(STORAGE_KEYS.PLAYERS)) {
     const samplePlayers: Player[] = [
-      { id: '1', name: 'Erik Andersson', number: 7, goals: 0, assists: 0, matches: 0 },
-      { id: '2', name: 'Johan Svensson', number: 11, goals: 0, assists: 0, matches: 0 },
-      { id: '3', name: 'Magnus Karlsson', number: 23, goals: 0, assists: 0, matches: 0 },
+      { id: '1', name: 'Mr. Cool', number: 7, goals: 0, assists: 0, matches: 0 },
+      { id: '2', name: 'Mr. Freeze', number: 11, goals: 0, assists: 0, matches: 0 },
+      { id: '3', name: 'Mr. Frozone', number: 23, goals: 0, assists: 0, matches: 0 },
     ];
     localStorage.setItem(STORAGE_KEYS.PLAYERS, JSON.stringify(samplePlayers));
   }

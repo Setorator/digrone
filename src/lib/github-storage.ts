@@ -2,8 +2,10 @@ import { GITHUB_CONFIG, getGitHubToken } from './github-config';
 import type { Player, Match, Goal } from './storage';
 const BASE_URL = 'https://api.github.com';
 const RAW_URL = `https://raw.githubusercontent.com/${GITHUB_CONFIG.owner}/${GITHUB_CONFIG.repo}/${GITHUB_CONFIG.branch}`;
+
 // Fallback to local URLs in development
 const isDevelopment = import.meta.env.DEV;
+
 // Read functions (public, no auth needed)
 export const fetchPlayers = async (): Promise<Player[]> => {
   const url = isDevelopment 
@@ -14,6 +16,7 @@ export const fetchPlayers = async (): Promise<Player[]> => {
   if (!response.ok) return [];
   return response.json();
 };
+
 export const fetchMatches = async (): Promise<Match[]> => {
   const url = isDevelopment 
     ? `${import.meta.env.BASE_URL}data/matches.json`
@@ -23,6 +26,7 @@ export const fetchMatches = async (): Promise<Match[]> => {
   if (!response.ok) return [];
   return response.json();
 };
+
 export const fetchGoals = async (): Promise<Goal[]> => {
   const url = isDevelopment 
     ? `${import.meta.env.BASE_URL}data/goals.json`
@@ -32,6 +36,7 @@ export const fetchGoals = async (): Promise<Goal[]> => {
   if (!response.ok) return [];
   return response.json();
 };
+
 // Write functions (require GitHub token)
 const updateFile = async (path: string, content: string, message: string) => {
   const token = getGitHubToken();
@@ -76,6 +81,7 @@ const updateFile = async (path: string, content: string, message: string) => {
   }
   return response.json();
 };
+
 export const savePlayers = async (players: Player[]): Promise<void> => {
   if (isDevelopment) {
     localStorage.setItem('digrone_players', JSON.stringify(players));
@@ -89,6 +95,7 @@ export const savePlayers = async (players: Player[]): Promise<void> => {
     'Update players data'
   );
 };
+
 export const saveMatches = async (matches: Match[]): Promise<void> => {
   if (isDevelopment) {
     localStorage.setItem('digrone_matches', JSON.stringify(matches));
@@ -102,6 +109,7 @@ export const saveMatches = async (matches: Match[]): Promise<void> => {
     'Update matches data'
   );
 };
+
 export const saveGoals = async (goals: Goal[]): Promise<void> => {
   if (isDevelopment) {
     localStorage.setItem('digrone_goals', JSON.stringify(goals));
@@ -114,4 +122,5 @@ export const saveGoals = async (goals: Goal[]): Promise<void> => {
     content,
     'Update goals data'
   );
+
 };

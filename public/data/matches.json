@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": "1",
+    "date": "2025-09-15T19:00:00Z",
+    "opponent": "FC Blåvitt",
+    "homeGame": true,
+    "goalsFor": 3,
+    "goalsAgainst": 2,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "2",
+    "date": "2025-10-01T18:30:00Z",
+    "opponent": "IFK Röda",
+    "homeGame": false,
+    "goalsFor": 1,
+    "goalsAgainst": 1,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "3",
+    "date": "2025-11-05T19:00:00Z",
+    "opponent": "Gula Laget",
+    "homeGame": true,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "4",
+    "date": "2025-11-20T20:00:00Z",
+    "opponent": "Svarta FC",
+    "homeGame": false,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "5",
+    "date": "2025-12-10T19:30:00Z",
+    "opponent": "Vita United",
+    "homeGame": true,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "lineup": ["1", "2", "3"]
+  }
+]
