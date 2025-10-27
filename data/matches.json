@@ -1,6 +1,51 @@
 [
   {
     "id": "1",
+    "date": "2025-04-15T19:00:00Z",
+    "opponent": "FC Blåvitt",
+    "homeGame": true,
+    "goalsFor": 3,
+    "goalsAgainst": 2,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "1",
+    "date": "2025-05-15T19:00:00Z",
+    "opponent": "FC Blåvitt",
+    "homeGame": true,
+    "goalsFor": 3,
+    "goalsAgainst": 2,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "1",
+    "date": "2025-06-15T19:00:00Z",
+    "opponent": "FC Blåvitt",
+    "homeGame": true,
+    "goalsFor": 3,
+    "goalsAgainst": 2,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "1",
+    "date": "2025-07-15T19:00:00Z",
+    "opponent": "FC Blåvitt",
+    "homeGame": true,
+    "goalsFor": 3,
+    "goalsAgainst": 2,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "1",
+    "date": "2025-08-15T19:00:00Z",
+    "opponent": "FC Blåvitt",
+    "homeGame": true,
+    "goalsFor": 2,
+    "goalsAgainst": 2,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "1",
     "date": "2025-09-15T19:00:00Z",
     "opponent": "FC Blåvitt",
     "homeGame": true,
