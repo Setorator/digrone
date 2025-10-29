@@ -7,6 +7,8 @@ export interface Player {
   goals: number;
   assists: number;
   matches: number;
+  currentTab: number;
+  paidOffTab: number;
 }
 
 export interface Goal {
@@ -37,12 +39,7 @@ const STORAGE_KEYS = {
 // Initialize with sample data if empty
 const initializeData = () => {
   if (!localStorage.getItem(STORAGE_KEYS.PLAYERS)) {
-    const samplePlayers: Player[] = [
-      { id: '1', name: 'Mr. Cool', number: 7, goals: 0, assists: 0, matches: 0 },
-      { id: '2', name: 'Mr. Freeze', number: 11, goals: 0, assists: 0, matches: 0 },
-      { id: '3', name: 'Mr. Frozone', number: 23, goals: 0, assists: 0, matches: 0 },
-    ];
-    localStorage.setItem(STORAGE_KEYS.PLAYERS, JSON.stringify(samplePlayers));
+    localStorage.setItem(STORAGE_KEYS.PLAYERS, JSON.stringify([]));
   }
   if (!localStorage.getItem(STORAGE_KEYS.MATCHES)) {
     localStorage.setItem(STORAGE_KEYS.MATCHES, JSON.stringify([]));
