@@ -88,5 +88,32 @@
     "goalsFor": 0,
     "goalsAgainst": 0,
     "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "11",
+    "date": "2025-12-13T19:30:00Z",
+    "opponent": "Vita United",
+    "homeGame": true,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "12",
+    "date": "2025-12-17T19:30:00Z",
+    "opponent": "Vita United",
+    "homeGame": true,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "lineup": ["1", "2", "3"]
+  },
+  {
+    "id": "13",
+    "date": "2025-12-22T19:30:00Z",
+    "opponent": "Vita United",
+    "homeGame": true,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "lineup": ["1", "2", "3"]
   }
 ]

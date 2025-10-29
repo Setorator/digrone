@@ -5,7 +5,9 @@
     "number": 13,
     "goals": 0,
     "assists": 0,
-    "matches": 0
+    "matches": 0,
+    "currentTab": 2,
+    "paidOffTab": 1
   },
   {
     "id": "2",
@@ -13,7 +15,9 @@
     "number": 37,
     "goals": 0,
     "assists": 0,
-    "matches": 0
+    "matches": 0,
+    "currentTab": 43,
+    "paidOffTab": 3
   },
   {
     "id": "3",
@@ -21,6 +25,8 @@
     "number": 23,
     "goals": 0,
     "assists": 0,
-    "matches": 0
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 1
   }
 ]
