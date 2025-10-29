@@ -1,4 +1,4 @@
-# Di Gröne Stats Hub
+# Di Gröne
 
 A web application for tracking floorball game statistics at both player and team levels.
 
