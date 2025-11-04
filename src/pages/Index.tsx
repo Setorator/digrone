@@ -158,8 +158,10 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground mb-2">
                     {new Date(nextMatch.date).toLocaleDateString('sv-SE', { 
                       day: 'numeric',
-                      month: 'short',
-                      year: 'numeric'
+                      month: 'long',
+                      year: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit'
                     })}
                   </p>
                   <p className="text-lg">
