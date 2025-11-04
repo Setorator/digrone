@@ -70,7 +70,7 @@ const Statistics = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle>Matchhistorik</CardTitle>
+              <CardTitle>Matcher</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="max-h-[600px] overflow-y-auto">
@@ -90,7 +90,15 @@ const Statistics = () => {
                       const draw = match.goalsFor === match.goalsAgainst;
                       return (
                         <TableRow key={match.id}>
-                          <TableCell>{new Date(match.date).toLocaleDateString('sv-SE')}</TableCell>
+                          <TableCell>{new Date(match.date).toLocaleDateString(
+                            'sv-SE', { 
+                              day: 'numeric',
+                              month: 'numeric',
+                              year: 'numeric',
+                              hour: '2-digit',
+                              minute: '2-digit'
+                            })}
+                          </TableCell>
                           <TableCell>{match.opponent}</TableCell>
                           <TableCell className="text-center">
                             {match.homeGame ? 'Hemma' : 'Borta'}
