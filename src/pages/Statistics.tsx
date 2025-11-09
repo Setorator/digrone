@@ -13,7 +13,7 @@ const Statistics = () => {
     const loadData = async () => {
       const players = await fetchPlayers();
       const matches = await fetchMatches()
-      setPlayers(players.sort((a, b) => b.goals - a.goals));
+      setPlayers(players.sort((a,b) => b.name.split(" ")[1] > a.name.split(" ")[1] ? -1 : 1));
       setMatches(matches.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
     };
     loadData();
@@ -31,27 +31,34 @@ const Statistics = () => {
             <div>
               <h2 className="text-2xl font-bold text-center mb-4">Mål</h2>
               <div className="flex items-end justify-center gap-4 py-8">
-                {/* 2nd place */}
-                <div className="flex flex-col items-center bg-slate-100 dark:bg-slate-800 p-6 rounded-lg w-40" style={{height: '200px'}}>
-                  <div className="text-4xl mb-2">🥈</div>
-                  <div className="font-bold text-center">{players[1].name}</div>
-                  <div className="text-3xl font-bold text-primary mt-auto">{players[1].goals}</div>
-                  <div className="text-xs text-muted-foreground">mål</div>
-                </div>
-                {/* 1st place - tallest */}
-                <div className="flex flex-col items-center bg-yellow-100 dark:bg-yellow-900 p-6 rounded-lg w-40" style={{height: '240px'}}>
-                  <div className="text-5xl mb-2">🥇</div>
-                  <div className="font-bold text-lg text-center">{players[0].name}</div>
-                  <div className="text-4xl font-bold text-primary mt-auto">{players[0].goals}</div>
-                  <div className="text-sm text-muted-foreground">mål</div>
-                </div>
-                {/* 3rd place */}
-                <div className="flex flex-col items-center bg-orange-100 dark:bg-orange-900 p-4 rounded-lg w-40" style={{height: '165px'}}>
-                  <div className="text-3xl mb-2">🥉</div>
-                  <div className="font-bold text-center">{players[2].name}</div>
-                  <div className="text-2xl font-bold text-primary mt-auto">{players[2].goals}</div>
-                  <div className="text-xs text-muted-foreground">mål</div>
-                </div>
+                {(() => {
+                  const sortedByGoals = [...players].sort((a, b) => (b.goals) - (a.goals));
+                  return (
+                    <>
+                      {/* 2nd place */}
+                      <div className="flex flex-col items-center bg-slate-100 dark:bg-slate-800 p-6 rounded-lg w-40" style={{height: '200px'}}>
+                        <div className="text-4xl mb-2">🥈</div>
+                        <div className="font-bold text-center">{sortedByGoals[1].name}</div>
+                        <div className="text-3xl font-bold text-primary mt-auto">{sortedByGoals[1].goals}</div>
+                        <div className="text-xs text-muted-foreground">mål</div>
+                      </div>
+                      {/* 1st place - tallest */}
+                      <div className="flex flex-col items-center bg-yellow-100 dark:bg-yellow-900 p-6 rounded-lg w-40" style={{height: '240px'}}>
+                        <div className="text-5xl mb-2">🥇</div>
+                        <div className="font-bold text-lg text-center">{sortedByGoals[0].name}</div>
+                        <div className="text-4xl font-bold text-primary mt-auto">{sortedByGoals[0].goals}</div>
+                        <div className="text-sm text-muted-foreground">mål</div>
+                      </div>
+                      {/* 3rd place */}
+                      <div className="flex flex-col items-center bg-orange-100 dark:bg-orange-900 p-4 rounded-lg w-40" style={{height: '165px'}}>
+                        <div className="text-3xl mb-2">🥉</div>
+                        <div className="font-bold text-center">{sortedByGoals[2].name}</div>
+                        <div className="text-2xl font-bold text-primary mt-auto">{sortedByGoals[2].goals}</div>
+                        <div className="text-xs text-muted-foreground">mål</div>
+                      </div>
+                    </>
+                  );
+                })()}
               </div>
             </div>
           )}
@@ -220,6 +227,7 @@ const Statistics = () => {
                 <TableBody>
                   {players.length > 0 ? (
                     players
+                      .sort((a,b) => b.name.split(" ")[1] > a.name.split(" ")[1] ? -1 : 1)
                       .sort((a,b) => (b.goals + b.assists) - (a.goals + a.assists))
                       .map((player, index) => (
                       <TableRow key={player.id}>
