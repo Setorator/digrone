@@ -29,7 +29,7 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 0,
-    "currentTab": 0,
+    "currentTab": 4,
     "paidOffTab": 0
   },
   {
@@ -63,6 +63,28 @@
     "penaltyMins": 0,
     "matches": 0,
     "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "7",
+    "name": "Anton Vikström",
+    "number": 0,
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 8,
+    "paidOffTab": 0
+  },
+  {
+    "id": "8",
+    "name": "William Raleby",
+    "number": 0,
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 8,
     "paidOffTab": 0
   }
 ]
