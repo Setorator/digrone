@@ -118,15 +118,16 @@ const Statistics = () => {
                 <TableBody>
                   {players.length > 0 ? (
                     players
+                      .filter(p => p.currentTab + p.paidOffTab > 0)
                       .sort((a, b) => b.currentTab - a.currentTab)
                       .map((player) => (
                         <TableRow key={player.id}>
                           <TableCell>{player.name}</TableCell>
                           <TableCell className="text-right font-semibold">
-                            {player.currentTab > 0 ? `${player.currentTab} flak` : '-'}
+                            {player.currentTab > 0 ? `${player.currentTab} burkar` : '-'}
                           </TableCell>
                           <TableCell className="text-right text-muted-foreground">
-                            {player.paidOffTab > 0 ? `${player.paidOffTab} flak` : '-'}
+                            {player.paidOffTab > 0 ? `${player.paidOffTab} burkar` : '-'}
                           </TableCell>
                         </TableRow>
                       ))
@@ -154,7 +155,6 @@ const Statistics = () => {
                   <TableRow>
                     <TableHead>Datum</TableHead>
                     <TableHead>Motståndare</TableHead>
-                    <TableHead className="text-center">Hemma/Borta</TableHead>
                     <TableHead className="text-center">Resultat</TableHead>
                   </TableRow>
                 </TableHeader>
@@ -175,9 +175,6 @@ const Statistics = () => {
                             })}
                           </TableCell>
                           <TableCell>{match.opponent}</TableCell>
-                          <TableCell className="text-center">
-                            {match.homeGame ? 'Hemma' : 'Borta'}
-                          </TableCell>
                           <TableCell className="text-center">
                             <span
                               className={`font-semibold ${
@@ -219,25 +216,27 @@ const Statistics = () => {
                   <TableRow>
                     <TableHead className="w-16">Plac.</TableHead>
                     <TableHead>Spelare</TableHead>
-                    <TableHead className="text-right">Nr</TableHead>
+                    <TableHead className="text-right">Poäng</TableHead>
                     <TableHead className="text-right">Mål</TableHead>
                     <TableHead className="text-right">Assist</TableHead>
-                    <TableHead className="text-right">Poäng</TableHead>
+                    <TableHead className="text-right">Utv. minuter</TableHead>
                     <TableHead className="text-right">Matcher</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {players.length > 0 ? (
-                    players.map((player, index) => (
+                    players
+                      .sort((a,b) => (b.goals + b.assists) - (a.goals + a.assists))
+                      .map((player, index) => (
                       <TableRow key={player.id}>
                         <TableCell className="font-medium">{index + 1}</TableCell>
                         <TableCell>{player.name}</TableCell>
-                        <TableCell className="text-right">{player.number}</TableCell>
-                        <TableCell className="text-right font-semibold">{player.goals}</TableCell>
-                        <TableCell className="text-right">{player.assists}</TableCell>
                         <TableCell className="text-right font-semibold">
                           {player.goals + player.assists}
                         </TableCell>
+                        <TableCell className="text-right font-semibold">{player.goals}</TableCell>
+                        <TableCell className="text-right">{player.assists}</TableCell>
+                        <TableCell className="text-right">{player.penaltyMins}</TableCell>
                         <TableCell className="text-right">{player.matches}</TableCell>
                       </TableRow>
                     ))
