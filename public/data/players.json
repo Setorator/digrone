@@ -1,32 +1,52 @@
 [
   {
     "id": "1",
-    "name": "Mr. Cool",
-    "number": 13,
+    "name": "Kim Askling",
+    "number": 0,
     "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "matches": 0,
-    "currentTab": 2,
-    "paidOffTab": 1
+    "currentTab": 0,
+    "paidOffTab": 0
   },
   {
     "id": "2",
-    "name": "Mr. Beast",
-    "number": 37,
-    "goals": 0,
-    "assists": 0,
-    "matches": 0,
-    "currentTab": 43,
-    "paidOffTab": 3
-  },
-  {
-    "id": "3",
-    "name": "Mr. Freeze",
-    "number": 23,
-    "goals": 0,
+    "name": "Hampus Jardeby",
+    "number": 0,
+    "goals": 1,
     "assists": 0,
     "matches": 0,
     "currentTab": 0,
-    "paidOffTab": 1
+    "paidOffTab": 0
+  },
+  {
+    "id": "3",
+    "name": "André Fredriksson",
+    "number": 0,
+    "goals": 1,
+    "assists": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "4",
+    "name": "Daniel Bengtsson (C)",
+    "number": 0,
+    "goals": 1,
+    "assists": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "5",
+    "name": "David Andersson",
+    "number": 0,
+    "goals": 1,
+    "assists": 1,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
   }
 ]
