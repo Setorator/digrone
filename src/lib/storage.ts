@@ -6,6 +6,7 @@ export interface Player {
   number: number;
   goals: number;
   assists: number;
+  penaltyMins: number;
   matches: number;
   currentTab: number;
   paidOffTab: number;
