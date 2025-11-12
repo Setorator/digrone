@@ -2,7 +2,6 @@
   {
     "id": "1",
     "name": "Kim Askling",
-    "number": 0,
     "goals": 0,
     "assists": 1,
     "penaltyMins": 0,
@@ -13,10 +12,9 @@
   {
     "id": "2",
     "name": "Hampus Jardeby",
-    "number": 0,
     "goals": 1,
-    "penaltyMins": 0,
     "assists": 0,
+    "penaltyMins": 0,
     "matches": 0,
     "currentTab": 0,
     "paidOffTab": 0
@@ -24,7 +22,6 @@
   {
     "id": "3",
     "name": "André Fredriksson",
-    "number": 0,
     "goals": 1,
     "assists": 0,
     "penaltyMins": 0,
@@ -35,7 +32,6 @@
   {
     "id": "4",
     "name": "Daniel Bengtsson (C)",
-    "number": 0,
     "goals": 1,
     "assists": 0,
     "penaltyMins": 2,
@@ -46,7 +42,6 @@
   {
     "id": "5",
     "name": "David Andersson",
-    "number": 0,
     "goals": 1,
     "assists": 1,
     "penaltyMins": 0,
@@ -57,7 +52,6 @@
   {
     "id": "6",
     "name": "William Vikstöm",
-    "number": 0,
     "goals": 0,
     "assists": 1,
     "penaltyMins": 0,
@@ -68,7 +62,6 @@
   {
     "id": "7",
     "name": "Anton Vikström",
-    "number": 0,
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
@@ -79,12 +72,91 @@
   {
     "id": "8",
     "name": "William Raleby",
-    "number": 0,
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
     "matches": 0,
     "currentTab": 8,
+    "paidOffTab": 0
+  },
+  {
+    "id": "9",
+    "name": "Viktor Örtlund",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "10",
+    "name": "Anton Mellgren",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "11",
+    "name": "Lukas Hagström",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "12",
+    "name": "Martin Kasslert",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "13",
+    "name": "Johan Nordling",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "14",
+    "name": "Josef Hallquist",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "15",
+    "name": "Daniel Kyrk",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "16",
+    "name": "Johathan Vikström",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 0,
     "paidOffTab": 0
   }
 ]
