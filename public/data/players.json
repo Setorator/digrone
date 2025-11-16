@@ -4,8 +4,8 @@
     "name": "Kim Askling",
     "goals": 0,
     "assists": 1,
-    "penaltyMins": 0,
-    "matches": 0,
+    "penaltyMins": 2,
+    "matches": 1,
     "currentTab": 0,
     "paidOffTab": 0
   },
@@ -15,7 +15,7 @@
     "goals": 1,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 0,
+    "matches": 1,
     "currentTab": 0,
     "paidOffTab": 0
   },
@@ -23,9 +23,9 @@
     "id": "3",
     "name": "André Fredriksson",
     "goals": 1,
-    "assists": 0,
-    "penaltyMins": 0,
-    "matches": 0,
+    "assists": 1,
+    "penaltyMins": 2,
+    "matches": 1,
     "currentTab": 4,
     "paidOffTab": 0
   },
@@ -35,17 +35,17 @@
     "goals": 1,
     "assists": 0,
     "penaltyMins": 2,
-    "matches": 0,
-    "currentTab": 0,
+    "matches": 1,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
     "id": "5",
     "name": "David Andersson",
-    "goals": 1,
-    "assists": 1,
+    "goals": 5,
+    "assists": 2,
     "penaltyMins": 0,
-    "matches": 0,
+    "matches": 1,
     "currentTab": 0,
     "paidOffTab": 0
   },
@@ -55,8 +55,8 @@
     "goals": 0,
     "assists": 1,
     "penaltyMins": 0,
-    "matches": 0,
-    "currentTab": 0,
+    "matches": 1,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -75,7 +75,7 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 0,
+    "matches": 1,
     "currentTab": 8,
     "paidOffTab": 0
   },
@@ -85,18 +85,18 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 0,
-    "currentTab": 0,
+    "matches": 1,
+    "currentTab": 24,
     "paidOffTab": 0
   },
   {
     "id": "10",
     "name": "Anton Mellgren",
-    "goals": 0,
-    "assists": 0,
+    "goals": 1,
+    "assists": 1,
     "penaltyMins": 0,
     "matches": 0,
-    "currentTab": 0,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -105,7 +105,7 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 0,
+    "matches": 1,
     "currentTab": 0,
     "paidOffTab": 0
   },
@@ -115,15 +115,15 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 0,
-    "currentTab": 0,
+    "matches": 1,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
     "id": "13",
     "name": "Johan Nordling",
     "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "penaltyMins": 0,
     "matches": 0,
     "currentTab": 0,
@@ -132,20 +132,20 @@
   {
     "id": "14",
     "name": "Josef Hallquist",
-    "goals": 0,
+    "goals": 1,
     "assists": 0,
-    "penaltyMins": 0,
-    "matches": 0,
+    "penaltyMins": 2,
+    "matches": 1,
     "currentTab": 0,
     "paidOffTab": 0
   },
   {
     "id": "15",
     "name": "Daniel Kyrk",
-    "goals": 0,
-    "assists": 0,
+    "goals": 1,
+    "assists": 3,
     "penaltyMins": 0,
-    "matches": 0,
+    "matches": 1,
     "currentTab": 0,
     "paidOffTab": 0
   },
@@ -156,7 +156,7 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 0,
-    "currentTab": 0,
+    "currentTab": 8,
     "paidOffTab": 0
   }
 ]
