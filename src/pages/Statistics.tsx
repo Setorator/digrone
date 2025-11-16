@@ -117,6 +117,15 @@ const Statistics = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
+                  <TableRow key="0">
+                    <TableCell>Jonas Snäll</TableCell>
+                    <TableCell className="text-right font-semibold">
+                      12 Monster
+                    </TableCell>
+                    <TableCell className="text-right text-muted-foreground">
+                      -
+                    </TableCell>
+                  </TableRow>
                   {players.length > 0 ? (
                     players
                       .filter(p => p.currentTab + p.paidOffTab > 0)
