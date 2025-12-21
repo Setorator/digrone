@@ -6,7 +6,7 @@
     "assists": 1,
     "penaltyMins": 2,
     "matches": 2,
-    "currentTab": 12,
+    "currentTab": 2,
     "paidOffTab": 0
   },
   {
@@ -16,7 +16,7 @@
     "assists": 1,
     "penaltyMins": 0,
     "matches": 3,
-    "currentTab": 0,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -36,8 +36,8 @@
     "assists": 0,
     "penaltyMins": 2,
     "matches": 2,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "5",
@@ -46,7 +46,7 @@
     "assists": 2,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 0,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -56,8 +56,8 @@
     "assists": 1,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "7",
@@ -66,8 +66,8 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "8",
@@ -76,8 +76,8 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 3,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "9",
@@ -96,8 +96,8 @@
     "assists": 1,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "11",
@@ -126,7 +126,7 @@
     "assists": 1,
     "penaltyMins": 0,
     "matches": 1,
-    "currentTab": 0,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -156,8 +156,8 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 1,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "17",
