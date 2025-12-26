@@ -17,6 +17,16 @@ export const fetchPlayers = async (): Promise<Player[]> => {
   return response.json();
 };
 
+export const fetchTournamentPlayers = async (): Promise<Player[]> => {
+  const url = isDevelopment
+    ? `${import.meta.env.BASE_URL}data/tournament-players.json`
+    : `${RAW_URL}/${GITHUB_CONFIG.dataPath}/tournament-players.json`;
+
+  const response = await fetch(url);
+  if (!response.ok) return [];
+  return response.json();
+};
+
 export const fetchMatches = async (): Promise<Match[]> => {
   const url = isDevelopment 
     ? `${import.meta.env.BASE_URL}data/matches.json`

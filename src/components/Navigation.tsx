@@ -24,6 +24,11 @@ const Navigation = () => {
                 Statistik
               </Button>
             </Link>
+            <Link to="/tournament">
+              <Button variant={isActive('/tournament') ? 'default' : 'ghost'}>
+                Regionscupen
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
