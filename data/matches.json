@@ -19,7 +19,16 @@
   },
   {
     "id": "3",
-    "date": "2025-12-07T11:30:00",
+    "date": "2025-12-21T13:00:00",
+    "opponent": "AP-99",
+    "homeGame": false,
+    "goalsFor": 2,
+    "goalsAgainst": 2,
+    "lineup": []
+  },
+  {
+    "id": "4",
+    "date": "2026-01-04T11:30:00",
     "opponent": "Signtools",
     "homeGame": false,
     "goalsFor": 0,
@@ -27,18 +36,9 @@
     "lineup": []
   },
   {
-    "id": "4",
-    "date": "2025-12-07T13:30:00",
-    "opponent": "Glänne IK",
-    "homeGame": false,
-    "goalsFor": 0,
-    "goalsAgainst": 0,
-    "lineup": []
-  },
-  {
     "id": "5",
-    "date": "2025-12-21T13:00:00",
-    "opponent": "AP-99",
+    "date": "2026-01-04T13:30:00",
+    "opponent": "Glänne IK",
     "homeGame": false,
     "goalsFor": 0,
     "goalsAgainst": 0,

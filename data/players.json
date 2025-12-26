@@ -5,18 +5,18 @@
     "goals": 0,
     "assists": 1,
     "penaltyMins": 2,
-    "matches": 1,
-    "currentTab": 0,
+    "matches": 2,
+    "currentTab": 2,
     "paidOffTab": 0
   },
   {
     "id": "2",
     "name": "Hampus Jardeby",
-    "goals": 1,
-    "assists": 0,
+    "goals": 2,
+    "assists": 1,
     "penaltyMins": 0,
-    "matches": 1,
-    "currentTab": 0,
+    "matches": 3,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -25,7 +25,7 @@
     "goals": 1,
     "assists": 1,
     "penaltyMins": 2,
-    "matches": 1,
+    "matches": 3,
     "currentTab": 4,
     "paidOffTab": 0
   },
@@ -35,9 +35,9 @@
     "goals": 1,
     "assists": 0,
     "penaltyMins": 2,
-    "matches": 1,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "matches": 2,
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "5",
@@ -45,8 +45,8 @@
     "goals": 5,
     "assists": 2,
     "penaltyMins": 0,
-    "matches": 1,
-    "currentTab": 0,
+    "matches": 2,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -55,9 +55,9 @@
     "goals": 0,
     "assists": 1,
     "penaltyMins": 0,
-    "matches": 1,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "matches": 2,
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "7",
@@ -65,9 +65,9 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 0,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "matches": 2,
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "8",
@@ -75,9 +75,9 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 1,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "matches": 3,
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "9",
@@ -95,9 +95,9 @@
     "goals": 1,
     "assists": 1,
     "penaltyMins": 0,
-    "matches": 0,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "matches": 2,
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "11",
@@ -105,7 +105,7 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 1,
+    "matches": 2,
     "currentTab": 0,
     "paidOffTab": 0
   },
@@ -125,8 +125,8 @@
     "goals": 0,
     "assists": 1,
     "penaltyMins": 0,
-    "matches": 0,
-    "currentTab": 0,
+    "matches": 1,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -135,17 +135,17 @@
     "goals": 1,
     "assists": 0,
     "penaltyMins": 2,
-    "matches": 1,
+    "matches": 3,
     "currentTab": 0,
     "paidOffTab": 0
   },
   {
     "id": "15",
     "name": "Daniel Kyrk",
-    "goals": 1,
+    "goals": 2,
     "assists": 3,
     "penaltyMins": 0,
-    "matches": 1,
+    "matches": 3,
     "currentTab": 0,
     "paidOffTab": 0
   },
@@ -155,8 +155,18 @@
     "goals": 0,
     "assists": 0,
     "penaltyMins": 0,
-    "matches": 0,
-    "currentTab": 8,
+    "matches": 1,
+    "currentTab": 0,
+    "paidOffTab": 8
+  },
+  {
+    "id": "17",
+    "name": "Cristofer Hvittensten",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 1,
+    "currentTab": 0,
     "paidOffTab": 0
   }
 ]
