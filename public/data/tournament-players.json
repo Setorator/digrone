@@ -19,14 +19,14 @@
     "id": "4",
     "name": "Daniel Bengtsson (C)",
     "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "penaltyMins": 0,
     "matches": 0
   },
   {
     "id": "5",
     "name": "David Andersson",
-    "goals": 0,
+    "goals": 3,
     "assists": 0,
     "penaltyMins": 0,
     "matches": 0
@@ -35,7 +35,7 @@
     "id": "6",
     "name": "William Vikström",
     "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "penaltyMins": 0,
     "matches": 0
   },
@@ -75,7 +75,7 @@
     "id": "13",
     "name": "Johan Nordling",
     "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "penaltyMins": 0,
     "matches": 0
   },
