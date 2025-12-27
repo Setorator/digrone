@@ -98,6 +98,13 @@ const groupMatches: GroupMatch[] = [
     type: 'group',
   },
   {
+    id: 'kvart',
+    stage: 'Kvartsfinal',
+    date: '15:00 / 15:30',
+    teams: [TEAM_NAME, 'TBD'],
+    // score: { home: 0, away: 0 },
+    type: 'knockout',
+  },
     id: 'semi',
     stage: 'Semifinal',
     date: '16:30 / 16:50',
