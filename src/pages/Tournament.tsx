@@ -86,7 +86,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 5',
     date: '13:20',
     teams: [TEAM_NAME, 'Monster E'],
-    // score: { home: 0, away: 0 },
+    score: { home: 2, away: 1 },
     type: 'group',
   },
   {
