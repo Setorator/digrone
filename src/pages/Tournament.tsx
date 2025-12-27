@@ -105,6 +105,7 @@ const groupMatches: GroupMatch[] = [
     // score: { home: 0, away: 0 },
     type: 'knockout',
   },
+  {
     id: 'semi',
     stage: 'Semifinal',
     date: '16:30 / 16:50',
