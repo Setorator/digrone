@@ -6,8 +6,8 @@
     "assists": 1,
     "penaltyMins": 2,
     "matches": 2,
-    "currentTab": 2,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 2
   },
   {
     "id": "2",
@@ -46,8 +46,8 @@
     "assists": 2,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 8,
-    "paidOffTab": 0
+    "currentTab": 0,
+    "paidOffTab": 8
   },
   {
     "id": "6",
@@ -106,8 +106,8 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 0,
-    "paidOffTab": 0
+    "currentTab": 8,
+    "paidOffTab": 24
   },
   {
     "id": "12",
