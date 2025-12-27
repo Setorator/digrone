@@ -70,7 +70,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 3',
     date: '11:40',
     teams: ['Monster E', 'Tröccas'],
-    // score: { home: 0, away: 0 },
+    score: { home: 0, away: 2 },
     type: 'group',
   },
   {
