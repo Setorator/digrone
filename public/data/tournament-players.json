@@ -86,5 +86,13 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 0
-  }
+  },
+  {
+    "id": "16",
+    "name": "Johathan Vikström",
+    "goals": 0,
+    "assists": 1,
+    "penaltyMins": 0,
+    "matches": 0,
+  },
 ]
