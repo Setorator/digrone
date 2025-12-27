@@ -94,7 +94,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 6',
     date: '14:10',
     teams: ['Tröccas', 'Lysviks IBF'],
-    // score: { home: 0, away: 0 },
+    score: { home: 5, away: 1 },
     type: 'group',
   },
   {
@@ -102,7 +102,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Kvartsfinal',
     date: '15:00 / 15:30',
     teams: [TEAM_NAME, 'TBD'],
-    // score: { home: 0, away: 0 },
+    score: { home: 3, away: 2 },
     type: 'knockout',
   },
   {
