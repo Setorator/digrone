@@ -59,8 +59,8 @@
     "id": "10",
     "name": "Anton Mellgren",
     "goals": 0,
-    "assists": 0,
-    "penaltyMins": 0,
+    "assists": 1,
+    "penaltyMins": 2,
     "matches": 0
   },
   {
@@ -74,15 +74,15 @@
   {
     "id": "13",
     "name": "Johan Nordling",
-    "goals": 0,
+    "goals": 1,
     "assists": 1,
-    "penaltyMins": 0,
+    "penaltyMins": 2,
     "matches": 0
   },
   {
     "id": "15",
     "name": "Daniel Kyrk",
-    "goals": 0,
+    "goals": 1,
     "assists": 0,
     "penaltyMins": 0,
     "matches": 0
