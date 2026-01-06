@@ -31,8 +31,8 @@
     "date": "2026-01-04T11:30:00",
     "opponent": "Signtools",
     "homeGame": false,
-    "goalsFor": 0,
-    "goalsAgainst": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 5,
     "lineup": []
   },
   {
@@ -40,8 +40,8 @@
     "date": "2026-01-04T13:30:00",
     "opponent": "Glänne IK",
     "homeGame": false,
-    "goalsFor": 0,
-    "goalsAgainst": 0,
+    "goalsFor": 4,
+    "goalsAgainst": 3,
     "lineup": []
   },
   {
