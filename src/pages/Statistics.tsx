@@ -1,30 +1,77 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { fetchMatches, fetchPlayers } from '@/lib/github-storage';
-import { useEffect, useState } from 'react';
+import { fetchMatches, fetchPlayers, fetchTournamentPlayers } from '@/lib/github-storage';
+import { useEffect, useMemo, useState } from 'react';
 import type { Match, Player } from '@/lib/storage';
 
 const Statistics = () => {
-  const [players, setPlayers] = useState<Player[]>([]);
+  const [seriesPlayers, setSeriesPlayers] = useState<Player[]>([]);
+  const [tournamentPlayers, setTournamentPlayers] = useState<Player[]>([]);
   const [matches, setMatches] = useState<Match[]>([]);
 
   useEffect(() => {
     const loadData = async () => {
-      const players = await fetchPlayers();
-      const matches = await fetchMatches()
-      setPlayers(players.sort((a,b) => b.name.split(" ")[1] > a.name.split(" ")[1] ? -1 : 1));
-      setMatches(matches.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
+      const [seriesData, tournamentData, matchesData] = await Promise.all([
+        fetchPlayers(),
+        fetchTournamentPlayers(),
+        fetchMatches(),
+      ]);
+
+      const sortByLastName = <T extends Player>(list: T[]) =>
+        list.sort((a, b) => (b.name.split(' ')[1] > a.name.split(' ')[1] ? -1 : 1));
+
+      setSeriesPlayers(sortByLastName(seriesData));
+      setTournamentPlayers(sortByLastName(tournamentData));
+      setMatches(matchesData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
     };
     loadData();
   }, []);
+
+  const players = useMemo(() => {
+    const normalizePlayer = (player: Player): Player => ({
+      ...player,
+      number: player.number ?? 0,
+      goals: player.goals ?? 0,
+      assists: player.assists ?? 0,
+      penaltyMins: player.penaltyMins ?? 0,
+      matches: player.matches ?? 0,
+      currentTab: player.currentTab ?? 0,
+      paidOffTab: player.paidOffTab ?? 0,
+    });
+
+    const merged = new Map<string, Player>();
+
+    seriesPlayers.forEach((player) => {
+      merged.set(player.id, normalizePlayer(player));
+    });
+
+    tournamentPlayers.forEach((tournamentPlayer) => {
+      const normalized = normalizePlayer(tournamentPlayer);
+      const existing = merged.get(normalized.id);
+
+      if (existing) {
+        merged.set(normalized.id, {
+          ...existing,
+          goals: existing.goals + normalized.goals,
+          assists: existing.assists + normalized.assists,
+          penaltyMins: existing.penaltyMins + normalized.penaltyMins,
+          matches: existing.matches + normalized.matches,
+        });
+      } else {
+        merged.set(normalized.id, normalized);
+      }
+    });
+
+    return Array.from(merged.values());
+  }, [seriesPlayers, tournamentPlayers]);
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-primary mb-8">Statistik</h1>
-
+        <p className="text-xl font-bold mb-4">Serie + turneringar</p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* Podium for Top 3 Goal Scorers */}
           {players.length >= 3 && (
@@ -32,7 +79,7 @@ const Statistics = () => {
               <h2 className="text-2xl font-bold text-center mb-4">Mål</h2>
               <div className="flex items-end justify-center gap-4 py-8">
                 {(() => {
-                  const sortedByGoals = [...players].sort((a, b) => (b.goals) - (a.goals));
+                  const sortedByGoals = [...players].sort((a, b) => b.goals - a.goals);
                   return (
                     <>
                       {/* 2nd place */}
@@ -156,7 +203,7 @@ const Statistics = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle>Matcher</CardTitle>
+              <CardTitle>Seriematcher</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="max-h-[600px] overflow-y-auto">
@@ -239,18 +286,18 @@ const Statistics = () => {
                       .sort((a,b) => b.name.split(" ")[1] > a.name.split(" ")[1] ? -1 : 1)
                       .sort((a,b) => (b.goals + b.assists) - (a.goals + a.assists))
                       .map((player, index) => (
-                      <TableRow key={player.id}>
-                        <TableCell className="font-medium">{index + 1}</TableCell>
-                        <TableCell>{player.name}</TableCell>
-                        <TableCell className="text-right font-semibold">
-                          {player.goals + player.assists}
-                        </TableCell>
-                        <TableCell className="text-right font-semibold">{player.goals}</TableCell>
-                        <TableCell className="text-right">{player.assists}</TableCell>
-                        <TableCell className="text-right">{player.penaltyMins}</TableCell>
-                        <TableCell className="text-right">{player.matches}</TableCell>
-                      </TableRow>
-                    ))
+                        <TableRow key={player.id}>
+                          <TableCell className="font-medium">{index + 1}</TableCell>
+                          <TableCell>{player.name}</TableCell>
+                          <TableCell className="text-right font-semibold">
+                            {player.goals + player.assists}
+                          </TableCell>
+                          <TableCell className="text-right font-semibold">{player.goals}</TableCell>
+                          <TableCell className="text-right">{player.assists}</TableCell>
+                          <TableCell className="text-right">{player.penaltyMins}</TableCell>
+                          <TableCell className="text-right">{player.matches}</TableCell>
+                        </TableRow>
+                      ))
                   ) : (
                     <TableRow>
                       <TableCell colSpan={7} className="text-center text-muted-foreground">
