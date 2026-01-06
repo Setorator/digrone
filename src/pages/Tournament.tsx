@@ -210,8 +210,9 @@ const Tournament = () => {
   const activeRoster = useMemo(
     () =>
       [...players].sort((a, b) => {
-        if (b.matches !== a.matches) return b.matches - a.matches;
-        return (b.goals + b.assists) - (a.goals + a.assists);
+        const pointDiff = (b.goals + b.assists) - (a.goals + a.assists);
+        if (pointDiff !== 0) return pointDiff;
+        return a.name.localeCompare(b.name);
       }),
     [players],
   );
@@ -417,7 +418,7 @@ const Tournament = () => {
                           <span>{player.goals + player.assists} p</span>
                         </div>
                         <div className="mt-3 grid grid-cols-2 gap-3 text-sm text-muted-foreground">
-                          <span>Matcher: {player.matches}</span>
+                          <span>Poäng: {player.goals + player.assists}</span>
                           <span>Mål: {player.goals}</span>
                           <span>Assist: {player.assists}</span>
                           <span>Utvisning: {player.penaltyMins}</span>
@@ -434,7 +435,6 @@ const Tournament = () => {
                     <TableHeader>
                       <TableRow>
                         <TableHead>Spelare</TableHead>
-                        <TableHead className="text-center">Matcher</TableHead>
                         <TableHead className="text-center">Mål</TableHead>
                         <TableHead className="text-center">Assist</TableHead>
                         <TableHead className="text-center">Poäng</TableHead>
@@ -449,7 +449,6 @@ const Tournament = () => {
                           .map((player) => (
                           <TableRow key={player.id}>
                             <TableCell className="font-medium">{player.name}</TableCell>
-                            <TableCell className="text-center">{player.matches}</TableCell>
                             <TableCell className="text-center font-semibold">{player.goals}</TableCell>
                             <TableCell className="text-center font-semibold">{player.assists}</TableCell>
                             <TableCell className="text-center font-semibold">
@@ -460,7 +459,7 @@ const Tournament = () => {
                         ))
                       ) : (
                         <TableRow>
-                          <TableCell colSpan={6} className="text-center text-muted-foreground">
+                          <TableCell colSpan={5} className="text-center text-muted-foreground">
                             Inga spelare registrerade ännu. Lägg till truppen i Admin-vyn.
                           </TableCell>
                         </TableRow>

@@ -4,95 +4,83 @@
     "name": "Kim Askling",
     "goals": 0,
     "assists": 0,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "2",
     "name": "Hampus Jardeby",
     "goals": 1,
     "assists": 0,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "4",
     "name": "Daniel Bengtsson (C)",
     "goals": 1,
     "assists": 1,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "5",
     "name": "David Andersson",
     "goals": 3,
     "assists": 1,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "6",
     "name": "William Vikström",
     "goals": 0,
     "assists": 1,
-    "penaltyMins": 4,
-    "matches": 0
+    "penaltyMins": 4
   },
   {
     "id": "7",
     "name": "Anton Vikström",
     "goals": 0,
     "assists": 0,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "8",
     "name": "William Raleby",
     "goals": 0,
     "assists": 1,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "10",
     "name": "Anton Mellgren",
     "goals": 0,
     "assists": 1,
-    "penaltyMins": 2,
-    "matches": 0
+    "penaltyMins": 2
   },
   {
     "id": "11",
     "name": "Lukas Hagström",
     "goals": 0,
     "assists": 0,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "13",
     "name": "Johan Nordling",
     "goals": 1,
     "assists": 1,
-    "penaltyMins": 2,
-    "matches": 0
+    "penaltyMins": 2
   },
   {
     "id": "15",
     "name": "Daniel Kyrk",
     "goals": 1,
     "assists": 0,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   },
   {
     "id": "16",
     "name": "Johathan Vikström",
     "goals": 0,
     "assists": 1,
-    "penaltyMins": 0,
-    "matches": 0
+    "penaltyMins": 0
   }
 ]

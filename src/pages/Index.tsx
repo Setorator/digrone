@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trophy, Award, Target } from 'lucide-react';
-import { fetchMatches, fetchPlayers } from '@/lib/github-storage';
+import { fetchMatches } from '@/lib/github-storage';
 import { useEffect, useState } from 'react';
 import { Match } from '@/lib/storage';
 
