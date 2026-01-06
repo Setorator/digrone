@@ -100,25 +100,17 @@ const groupMatches: GroupMatch[] = [
   {
     id: 'kvart',
     stage: 'Kvartsfinal',
-    date: '15:00 / 15:30',
-    teams: [TEAM_NAME, 'TBD'],
+    date: '15:40',
+    teams: [TEAM_NAME, 'FC Hingst'],
     score: { home: 3, away: 2 },
     type: 'knockout',
   },
   {
     id: 'semi',
     stage: 'Semifinal',
-    date: '16:30 / 16:50',
-    teams: [TEAM_NAME, 'TBD'],
-    // score: { home: 0, away: 0 },
-    type: 'knockout',
-  },
-  {
-    id: 'final',
-    stage: 'Final',
-    date: '17:10',
-    teams: [TEAM_NAME, 'TBD'],
-    // score: { home: 0, away: 0 },
+    date: '16:30',
+    teams: [TEAM_NAME, 'Tröccas'],
+    score: { home: 0, away: 3 },
     type: 'knockout',
   },
 ];
@@ -180,7 +172,7 @@ const deriveStandings = (games: GroupMatch[]): Standing[] => {
   };
 
   games.forEach((match) => {
-    if (match.teams.includes('TBD')) return;
+    if (match.type.includes('knockout')) return;
     const [home, away] = match.teams;
     const homeEntry = ensureTeam(home);
     const awayEntry = ensureTeam(away);
