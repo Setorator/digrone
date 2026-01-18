@@ -3,10 +3,10 @@
     "id": "1",
     "name": "Kim Askling",
     "goals": 0,
-    "assists": 1,
+    "assists": 2,
     "penaltyMins": 2,
     "matches": 2,
-    "currentTab": 0,
+    "currentTab": 24,
     "paidOffTab": 2
   },
   {
@@ -26,13 +26,13 @@
     "assists": 1,
     "penaltyMins": 2,
     "matches": 3,
-    "currentTab": 4,
+    "currentTab": 12,
     "paidOffTab": 0
   },
   {
     "id": "4",
     "name": "Daniel Bengtsson (C)",
-    "goals": 2,
+    "goals": 3,
     "assists": 0,
     "penaltyMins": 2,
     "matches": 2,
@@ -42,8 +42,8 @@
   {
     "id": "5",
     "name": "David Andersson",
-    "goals": 7,
-    "assists": 2,
+    "goals": 8,
+    "assists": 3,
     "penaltyMins": 0,
     "matches": 2,
     "currentTab": 0,
@@ -93,7 +93,7 @@
     "id": "10",
     "name": "Anton Mellgren",
     "goals": 1,
-    "assists": 1,
+    "assists": 2,
     "penaltyMins": 0,
     "matches": 2,
     "currentTab": 0,
@@ -126,7 +126,7 @@
     "assists": 1,
     "penaltyMins": 0,
     "matches": 1,
-    "currentTab": 8,
+    "currentTab": 16,
     "paidOffTab": 0
   },
   {
@@ -134,7 +134,7 @@
     "name": "Josef Hallquist",
     "goals": 1,
     "assists": 3,
-    "penaltyMins": 2,
+    "penaltyMins": 4,
     "matches": 3,
     "currentTab": 0,
     "paidOffTab": 0
@@ -146,7 +146,7 @@
     "assists": 3,
     "penaltyMins": 0,
     "matches": 3,
-    "currentTab": 0,
+    "currentTab": 8,
     "paidOffTab": 0
   },
   {
@@ -163,6 +163,16 @@
     "id": "17",
     "name": "Cristofer Hvittensten",
     "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 1,
+    "currentTab": 0,
+    "paidOffTab": 0
+  },
+  {
+    "id": "18",
+    "name": "Martin Lundberg",
+    "goals": 2,
     "assists": 0,
     "penaltyMins": 0,
     "matches": 1,
