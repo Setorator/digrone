@@ -188,5 +188,15 @@
     "matches": 1,
     "currentTab": 0,
     "paidOffTab": 0
+  },
+  {
+    "id": "20",
+    "name": "William Flodin",
+    "goals": 0,
+    "assists": 0,
+    "penaltyMins": 0,
+    "matches": 0,
+    "currentTab": 6,
+    "paidOffTab": 0
   }
 ]
