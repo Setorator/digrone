@@ -86,8 +86,8 @@
     "date": "2026-03-15T12:30:00",
     "opponent": "Signtools",
     "homeGame": false,
-    "goalsFor": 0,
-    "goalsAgainst": 0,
+    "goalsFor": 5,
+    "goalsAgainst": 1,
     "lineup": []
   }
 ]
