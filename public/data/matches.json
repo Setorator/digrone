@@ -95,26 +95,8 @@
     "date": "2026-03-21T13:00:00",
     "opponent": "Players",
     "homeGame": false,
-    "goalsFor": 0,
-    "goalsAgainst": 0,
-    "lineup": []
-  },
-  {
-    "id": "12",
-    "date": "2026-03-21T15:00:00",
-    "opponent": "AP99",
-    "homeGame": true,
-    "goalsFor": 0,
-    "goalsAgainst": 0,
-    "lineup": []
-  },
-  {
-    "id": "13",
-    "date": "2026-03-21T16:00:00",
-    "opponent": "Glänne",
-    "homeGame": false,
-    "goalsFor": 0,
-    "goalsAgainst": 0,
+    "goalsFor": 3,
+    "goalsAgainst": 6,
     "lineup": []
   },
 ]
