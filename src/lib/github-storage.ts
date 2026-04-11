@@ -27,6 +27,16 @@ export const fetchTournamentPlayers = async (): Promise<Player[]> => {
   return response.json();
 };
 
+export const fetchPowerCupPlayers = async (): Promise<Player[]> => {
+  const url = isDevelopment
+    ? `${import.meta.env.BASE_URL}data/power-cup-players.json`
+    : `${RAW_URL}/${GITHUB_CONFIG.dataPath}/power-cup-players.json`;
+
+  const response = await fetch(url);
+  if (!response.ok) return [];
+  return response.json();
+};
+
 export const fetchMatches = async (): Promise<Match[]> => {
   const url = isDevelopment 
     ? `${import.meta.env.BASE_URL}data/matches.json`

@@ -13,7 +13,7 @@ const Navigation = () => {
           <Link to="/" className="text-2xl font-bold text-primary">
             Di Gröne
           </Link>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2 justify-end">
             <Link to="/">
               <Button variant={isActive('/') ? 'default' : 'ghost'}>
                 Hem
@@ -27,6 +27,11 @@ const Navigation = () => {
             <Link to="/tournament">
               <Button variant={isActive('/tournament') ? 'default' : 'ghost'}>
                 Regionscupen
+              </Button>
+            </Link>
+            <Link to="/power-cup">
+              <Button variant={isActive('/power-cup') ? 'default' : 'ghost'}>
+                Power cup
               </Button>
             </Link>
           </div>
