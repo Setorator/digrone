@@ -24,7 +24,7 @@
     "id": "5",
     "name": "David Andersson",
     "goals": 2,
-    "assists": 0,
+    "assists": 1,
     "penaltyMins": 0
   },
   {
@@ -51,7 +51,7 @@
   {
     "id": "10",
     "name": "Anton Mellgren",
-    "goals": 0,
+    "goals": 1,
     "assists": 1,
     "penaltyMins": 0
   },
@@ -72,7 +72,7 @@
   {
     "id": "17",
     "name": "André Fredriksson",
-    "goals": 0,
+    "goals": 1,
     "assists": 0,
     "penaltyMins": 0
   },
@@ -80,7 +80,7 @@
     "id": "18",
     "name": "Josef Hallquist",
     "goals": 0,
-    "assists": 0,
+    "assists": 1,
     "penaltyMins": 0
   },
   {
