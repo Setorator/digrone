@@ -26,6 +26,7 @@ type GroupMatch = {
   date: string;
   teams: [string, string];
   score?: { home: number; away: number };
+  hidden?: boolean;
 };
 
 const groupMatches: GroupMatch[] = [
@@ -66,30 +67,59 @@ const groupMatches: GroupMatch[] = [
     teams: [TEAM_NAME, 'Fryksta Bruins'],
   },
   {
-    id: 'power-group-6',
+    id: 'power-group-7',
     stage: 'Match 6',
     date: '15:00',
     teams: ['Lag 33', 'Glänne IK'],
   },
   {
-    id: 'power-group-6',
+    id: 'power-group-8',
     stage: 'Match 6',
     date: '15:20',
     teams: ['The 4 skins', TEAM_NAME],
   },
   {
-    id: 'power-group-6',
+    id: 'power-group-9',
     stage: 'Match 6',
     date: '15:40',
     teams: ['Fryksta Bruins', 'Glänne IK'],
   },
   {
-    id: 'power-group-6',
+    id: 'power-group-10',
     stage: 'Match 6',
     date: '16:00',
     teams: ['Lag 33', 'The 4 skins'],
   },
+  {
+    id: 'power-playoff-1-8',
+    stage: 'Åttondelsfinal',
+    date: '11:00',
+    teams: [TEAM_NAME, 'TBD'],
+  },
+  {
+    id: 'power-playoff-1-4',
+    stage: 'Kvartsfinal',
+    date: 'TBD',
+    teams: [TEAM_NAME, 'TBD'],
+    hidden: true,
+  },
+  {
+    id: 'power-playoff-1-2',
+    stage: 'Semifinal',
+    date: 'TBD',
+    teams: [TEAM_NAME, 'TBD'],
+    hidden: true,
+  },
+  {
+    id: 'power-playoff-final',
+    stage: 'Final',
+    date: 'TBD',
+    teams: [TEAM_NAME, 'TBD'],
+    hidden: true,
+  },
 ];
+
+const visibleMatches = groupMatches.filter((match) => !match.hidden);
 
 const deriveStandings = (games: GroupMatch[]): Standing[] => {
   const standings = new Map<string, Standing>();
@@ -158,7 +188,7 @@ const PowerCup = () => {
     loadPlayers();
   }, []);
 
-  const groupStandings = deriveStandings(groupMatches);
+  const groupStandings = deriveStandings(visibleMatches);
 
   const activeRoster = useMemo(
     () =>
@@ -256,7 +286,7 @@ const PowerCup = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-4 sm:hidden">
-                  {groupMatches.map((match) => {
+                  {visibleMatches.map((match) => {
                     const isDiMatch = match.teams.includes(TEAM_NAME);
                     const resultText = match.score ? `${match.score.home} - ${match.score.away}` : 'Ej spelad';
                     return (
@@ -289,7 +319,7 @@ const PowerCup = () => {
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        {groupMatches.map((match) => {
+                        {visibleMatches.map((match) => {
                           const isDiMatch = match.teams.includes(TEAM_NAME);
                           return (
                             <TableRow key={match.id} className={isDiMatch ? 'bg-muted/40' : ''}>
