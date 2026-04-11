@@ -7,7 +7,7 @@ import { Calendar, MapPin } from 'lucide-react';
 import { fetchPowerCupPlayers } from '@/lib/github-storage';
 import type { Player } from '@/lib/storage';
 
-const TEAM_NAME = 'Di Grone';
+const TEAM_NAME = 'Di Gröne';
 
 type Standing = {
   team: string;
@@ -35,60 +35,70 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 1',
     date: '13:00',
     teams: [TEAM_NAME, 'Lag 33'],
+    score: { home: 2, away: 1},
   },
   {
     id: 'power-group-2',
     stage: 'Match 2',
     date: '13:20',
     teams: ['Fryksta Bruins', 'The 4 skins'],
+    score: { home: 1, away: 2},
   },
   {
     id: 'power-group-3',
     stage: 'Match 3',
     date: '13:40',
     teams: ['Glänne IK', TEAM_NAME],
+    score: { home: 0, away: 2},
   },
   {
     id: 'power-group-4',
     stage: 'Match 4',
     date: '14:00',
     teams: ['Lag 33', 'Fryksta Bruins'],
+    score: { home: 2, away: 4},
   },
   {
     id: 'power-group-5',
     stage: 'Match 5',
     date: '14:20',
     teams: ['The 4 skins', 'Glänne IK'],
+    score: { home: 1, away: 2},
   },
   {
     id: 'power-group-6',
     stage: 'Match 6',
     date: '14:40',
     teams: [TEAM_NAME, 'Fryksta Bruins'],
+    score: { home: 3, away: 2},
   },
   {
     id: 'power-group-7',
     stage: 'Match 6',
     date: '15:00',
     teams: ['Lag 33', 'Glänne IK'],
+    score: { home: 2, away: 6},
   },
   {
     id: 'power-group-8',
     stage: 'Match 6',
     date: '15:20',
     teams: ['The 4 skins', TEAM_NAME],
+    score: { home: 1, away: 2},
   },
   {
     id: 'power-group-9',
     stage: 'Match 6',
     date: '15:40',
     teams: ['Fryksta Bruins', 'Glänne IK'],
+    score: { home: 1, away: 1},
   },
   {
     id: 'power-group-10',
     stage: 'Match 6',
     date: '16:00',
     teams: ['Lag 33', 'The 4 skins'],
+    score: { home: 2, away: 3},
   },
   {
     id: 'power-playoff-1-8',
