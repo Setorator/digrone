@@ -7,7 +7,7 @@ import { Calendar, MapPin } from 'lucide-react';
 import { fetchPowerCupPlayers } from '@/lib/github-storage';
 import type { Player } from '@/lib/storage';
 
-const TEAM_NAME = 'Di Grone';
+const TEAM_NAME = 'Di Gröne';
 
 type Standing = {
   team: string;
