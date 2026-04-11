@@ -97,6 +97,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 6',
     date: '16:00',
     teams: ['Lag 33', 'The 4 skins'],
+    score: { home: 2, away: 3},
   },
 ];
 
