@@ -62,12 +62,14 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 5',
     date: '14:20',
     teams: ['The 4 skins', 'Glänne IK'],
+    score: { home: 1, away: 2},
   },
   {
     id: 'power-group-6',
     stage: 'Match 6',
     date: '14:40',
     teams: [TEAM_NAME, 'Fryksta Bruins'],
+    score: { home: 3, away: 2},
   },
   {
     id: 'power-group-6',
