@@ -55,6 +55,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 4',
     date: '14:00',
     teams: ['Lag 33', 'Fryksta Bruins'],
+    score: { home: 2, away: 4},
   },
   {
     id: 'power-group-5',
