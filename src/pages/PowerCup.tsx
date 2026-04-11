@@ -104,7 +104,7 @@ const groupMatches: GroupMatch[] = [
     id: 'power-playoff-1-8',
     stage: 'Åttondelsfinal',
     date: '11:00',
-    teams: [TEAM_NAME, 'TBD'],
+    teams: [TEAM_NAME, 'KTB'],
   },
   {
     id: 'power-playoff-1-4',
