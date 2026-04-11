@@ -76,12 +76,14 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 6',
     date: '15:00',
     teams: ['Lag 33', 'Glänne IK'],
+    score: { home: 2, away: 6},
   },
   {
     id: 'power-group-6',
     stage: 'Match 6',
     date: '15:20',
     teams: ['The 4 skins', TEAM_NAME],
+    score: { home: 1, away: 2},
   },
   {
     id: 'power-group-6',
