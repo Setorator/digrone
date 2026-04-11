@@ -34,6 +34,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 1',
     date: '13:00',
     teams: [TEAM_NAME, 'Lag 33'],
+    score: { home: 2, away: 1},
   },
   {
     id: 'power-group-2',
