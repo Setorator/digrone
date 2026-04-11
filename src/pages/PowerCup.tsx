@@ -90,6 +90,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Match 6',
     date: '15:40',
     teams: ['Fryksta Bruins', 'Glänne IK'],
+    score: { home: 1, away: 1},
   },
   {
     id: 'power-group-6',
