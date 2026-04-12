@@ -119,6 +119,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Semifinal',
     date: '15:00',
     teams: [TEAM_NAME, 'Tröccas'],
+    score: { home: 2, away: 3},
   },
   {
     id: 'power-playoff-final',
