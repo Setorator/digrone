@@ -112,6 +112,7 @@ const groupMatches: GroupMatch[] = [
     stage: 'Kvartsfinal',
     date: '13:30',
     teams: [TEAM_NAME, 'Dahlens United'],
+    score: { home: 1, away: 0},
   },
   {
     id: 'power-playoff-1-2',
