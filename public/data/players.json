@@ -26,8 +26,8 @@
     "assists": 1,
     "penaltyMins": 2,
     "matches": 3,
-    "currentTab": 18,
-    "paidOffTab": 0
+    "currentTab": 6,
+    "paidOffTab": 24
   },
   {
     "id": "4",
@@ -46,7 +46,7 @@
     "assists": 10,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 0,
+    "currentTab": 12,
     "paidOffTab": 8
   },
   {
@@ -76,7 +76,7 @@
     "assists": 0,
     "penaltyMins": 2,
     "matches": 3,
-    "currentTab": 0,
+    "currentTab": 12,
     "paidOffTab": 8
   },
   {
@@ -106,7 +106,7 @@
     "assists": 0,
     "penaltyMins": 0,
     "matches": 2,
-    "currentTab": 8,
+    "currentTab": 20,
     "paidOffTab": 24
   },
   {
@@ -126,8 +126,8 @@
     "assists": 2,
     "penaltyMins": 0,
     "matches": 1,
-    "currentTab": 22,
-    "paidOffTab": 0
+    "currentTab": 7,
+    "paidOffTab": 15
   },
   {
     "id": "14",
