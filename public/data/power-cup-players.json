@@ -30,7 +30,7 @@
   {
     "id": "6",
     "name": "William Vikström",
-    "goals": 2,
+    "goals": 3,
     "assists": 1,
     "penaltyMins": 0
   },
@@ -52,14 +52,14 @@
     "id": "10",
     "name": "Anton Mellgren",
     "goals": 2,
-    "assists": 3,
+    "assists": 4,
     "penaltyMins": 0
   },
   {
     "id": "15",
     "name": "Daniel Kyrk",
     "goals": 1,
-    "assists": 2,
+    "assists": 3,
     "penaltyMins": 0
   },
   {
@@ -86,7 +86,7 @@
   {
     "id": "19",
     "name": "Rasmus Hasselund",
-    "goals": 0,
+    "goals": 1,
     "assists": 2,
     "penaltyMins": 0
   },
