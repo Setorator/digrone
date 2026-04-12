@@ -105,13 +105,13 @@ const groupMatches: GroupMatch[] = [
     stage: 'Åttondelsfinal',
     date: '11:00',
     teams: [TEAM_NAME, 'KTB'],
+    score: { home: 3, away: 0},
   },
   {
     id: 'power-playoff-1-4',
     stage: 'Kvartsfinal',
-    date: 'TBD',
-    teams: [TEAM_NAME, 'TBD'],
-    hidden: true,
+    date: '13:30',
+    teams: [TEAM_NAME, 'Dahlens United'],
   },
   {
     id: 'power-playoff-1-2',
