@@ -23,14 +23,14 @@
   {
     "id": "5",
     "name": "David Andersson",
-    "goals": 2,
+    "goals": 3,
     "assists": 1,
     "penaltyMins": 0
   },
   {
     "id": "6",
     "name": "William Vikström",
-    "goals": 1,
+    "goals": 2,
     "assists": 1,
     "penaltyMins": 0
   },
@@ -52,7 +52,7 @@
     "id": "10",
     "name": "Anton Mellgren",
     "goals": 1,
-    "assists": 1,
+    "assists": 3,
     "penaltyMins": 0
   },
   {
@@ -87,13 +87,13 @@
     "id": "19",
     "name": "Rasmus Hasselund",
     "goals": 0,
-    "assists": 1,
+    "assists": 2,
     "penaltyMins": 0
   },
   {
     "id": "20",
     "name": "Oscar Lawner",
-    "goals": 0,
+    "goals": 1,
     "assists": 0,
     "penaltyMins": 0
   }
