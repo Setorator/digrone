@@ -117,9 +117,8 @@ const groupMatches: GroupMatch[] = [
   {
     id: 'power-playoff-1-2',
     stage: 'Semifinal',
-    date: 'TBD',
-    teams: [TEAM_NAME, 'TBD'],
-    hidden: true,
+    date: '15:00',
+    teams: [TEAM_NAME, 'Tröccas'],
   },
   {
     id: 'power-playoff-final',
