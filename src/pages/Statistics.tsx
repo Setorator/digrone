@@ -1,20 +1,22 @@
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { fetchMatches, fetchPlayers, fetchTournamentPlayers } from '@/lib/github-storage';
+import { fetchMatches, fetchPlayers, fetchPowerCupPlayers, fetchTournamentPlayers } from '@/lib/github-storage';
 import { useEffect, useMemo, useState } from 'react';
 import type { Match, Player } from '@/lib/storage';
 
 const Statistics = () => {
   const [seriesPlayers, setSeriesPlayers] = useState<Player[]>([]);
   const [tournamentPlayers, setTournamentPlayers] = useState<Player[]>([]);
+  const [powerCupPlayers, setPowerCupPlayers] = useState<Player[]>([]);
   const [matches, setMatches] = useState<Match[]>([]);
 
   useEffect(() => {
     const loadData = async () => {
-      const [seriesData, tournamentData, matchesData] = await Promise.all([
+      const [seriesData, tournamentData, powerCupData, matchesData] = await Promise.all([
         fetchPlayers(),
         fetchTournamentPlayers(),
+        fetchPowerCupPlayers(),
         fetchMatches(),
       ]);
 
@@ -23,6 +25,7 @@ const Statistics = () => {
 
       setSeriesPlayers(sortByLastName(seriesData));
       setTournamentPlayers(sortByLastName(tournamentData));
+      setPowerCupPlayers(sortByLastName(powerCupData));
       setMatches(matchesData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()));
     };
     loadData();
@@ -63,8 +66,25 @@ const Statistics = () => {
       }
     });
 
+    powerCupPlayers.forEach((powerCupPlayer) => {
+      const normalized = normalizePlayer(powerCupPlayer);
+      const existing = merged.get(normalized.id);
+
+      if (existing) {
+        merged.set(normalized.id, {
+          ...existing,
+          goals: existing.goals + normalized.goals,
+          assists: existing.assists + normalized.assists,
+          penaltyMins: existing.penaltyMins + normalized.penaltyMins,
+          matches: existing.matches + normalized.matches,
+        });
+      } else {
+        merged.set(normalized.id, normalized);
+      }
+    });
+
     return Array.from(merged.values());
-  }, [seriesPlayers, tournamentPlayers]);
+  }, [seriesPlayers, tournamentPlayers, powerCupPlayers]);
 
   return (
     <div className="min-h-screen bg-background">
