@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
 import Statistics from "./pages/Statistics";
 import Tournament from "./pages/Tournament";
 import PowerCup from "./pages/PowerCup";
@@ -18,7 +19,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
-          <Route path="/" element={<PowerCup />} />
+          <Route path="/" element={<Index />} />
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/tournament" element={<Tournament />} />
           <Route path="/power-cup" element={<PowerCup />} />
