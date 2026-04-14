@@ -74,28 +74,28 @@ const groupMatches: GroupMatch[] = [
   },
   {
     id: 'power-group-7',
-    stage: 'Match 6',
+    stage: 'Match 7',
     date: '15:00',
     teams: ['Lag 33', 'Glänne IK'],
     score: { home: 2, away: 6},
   },
   {
     id: 'power-group-8',
-    stage: 'Match 6',
+    stage: 'Match 8',
     date: '15:20',
     teams: ['The 4 skins', TEAM_NAME],
     score: { home: 1, away: 2},
   },
   {
     id: 'power-group-9',
-    stage: 'Match 6',
+    stage: 'Match 9',
     date: '15:40',
     teams: ['Fryksta Bruins', 'Glänne IK'],
     score: { home: 1, away: 1},
   },
   {
     id: 'power-group-10',
-    stage: 'Match 6',
+    stage: 'Match 10',
     date: '16:00',
     teams: ['Lag 33', 'The 4 skins'],
     score: { home: 2, away: 3},
@@ -131,6 +131,7 @@ const groupMatches: GroupMatch[] = [
 ];
 
 const visibleMatches = groupMatches.filter((match) => !match.hidden);
+const standingsMatches = visibleMatches.filter((match) => match.id.startsWith('power-group-'));
 
 const deriveStandings = (games: GroupMatch[]): Standing[] => {
   const standings = new Map<string, Standing>();
@@ -199,7 +200,7 @@ const PowerCup = () => {
     loadPlayers();
   }, []);
 
-  const groupStandings = deriveStandings(visibleMatches);
+  const groupStandings = deriveStandings(standingsMatches);
 
   const activeRoster = useMemo(
     () =>
